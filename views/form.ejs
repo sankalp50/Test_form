@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<!-- <link rel="stylesheet" type="text/css" href="test_form.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body style="margin: 40px;">
+	<div class="icon" style="text-align: center; padding-bottom: 20px; padding-top: 20px;">
+		<img src="icon.png">
+		<h1>Swasthya</h1>
+	</div>
+	<div class="container" style="width: 50%;">
+		<form action="/form" method="POST">
+		<label for="covid">
+			<h4><strong>Which of the following best describes you?</strong></h4>
+			<input type="radio" name="covid" value="I have tested positive for COVID-19" id="covid">
+			I have tested positive for COVID-19
+			<br>
+			<input type="radio" name="covid" value="I have tested negative for COVID-19" id="covid">
+			I have tested negative for COVID-19
+			<br>
+			<input type="radio" name="covid" value="I have taken a test for COVID-19 but have not received my lab report yet" id="covid">
+			I have taken a test for COVID-19 but have not received my lab report yet
+			<br>
+			<input type="radio" name="covid" value="I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional" id="covid">
+			I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional
+			<br>
+			<input type="radio" name="covid" value="I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms" id="covid">
+			I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms
+			<br>
+			<input type="radio" name="covid" value="I am a returning participant. I submitted my test results last time OR I have no test results to submit" id="covid">
+			I am a returning participant. I submitted my test results last time OR I have no test results to submit
+			<br>
+			<input type="radio" name="covid" value="I am a returning participant. I am here to submit my test results" id="covid">
+			I am a returning participant. I am here to submit my test results
+			<br>
+		</label>
+		<hr>
+		<h2>Demographic and health details</h2>
+		<hr>
+		<label for="covid1">
+			<h4><strong>Which of these symptoms are you currently experiencing? (Select all that apply)</strong></h4>
+			<input type="checkbox" name="covid1" value="No symptoms" id="covid1">
+			No symptoms
+			<br>
+			<input type="checkbox" name="covid1" value="Fever" id="covid1">
+			Fever
+			<br>
+			<input type="checkbox" name="covid1" value="Cough" id="covid1">
+			Cough
+			<br>
+			<input type="checkbox" name="covid1" value="Sore throat" id="covid1">
+			Sore throat
+			<br>
+			<input type="checkbox" name="covid1" value="Runny nose" id="covid1">
+			Runny nose
+			<br>
+			<input type="checkbox" name="covid1" value="Shortness of breath" id="covid1">
+			Shortness of breath
+			<br>
+			<input type="checkbox" name="covid1" value="Fatigue" id="covid1">
+			Fatigue
+			<br>
+			<input type="checkbox" name="covid1" value="Body aches" id="covid1">
+			Body aches
+			<br>
+			<input type="checkbox" name="covid1" value="Diarrhoea" id="covid1">
+			Diarrhoea
+			<br>
+			<input type="checkbox" name="covid1" value="Loss of smell or taste" id="covid1">
+			Loss of smell or taste
+			<br>
+		</label>
+		<label for="covid2">
+			<h4><strong>If you reported having a cough, when did the cough start? </strong></h4>
+			<input type="radio" name="covid2" value="I do not have a cough" id="covid2">
+			I do not have a cough
+			<br>
+			<input type="radio" name="covid2" value="Less than three days ago" id="covid2">
+			Less than three days ago
+			<br>
+			<input type="radio" name="covid2" value="A week ago" id="covid2">
+			A week ago
+			<br>
+			<input type="radio" name="covid2" value="More than a week ago" id="covid2">
+			More than a week ago
+			<br>
+			<input type="radio" name="covid2" value="I have a chronic cough" id="covid2">
+			I have a chronic cough
+			<br>
+			<hr>
+		</label>
+			<h2>COVID-19 test details</h2>
+			<br>
+			<div><p style="color:red;">Your test results will help us validate the recordings we collect. You can submit a redacted version of your lab report (with private information blacked out or hidden). Note that your test results will not be shared or made part of the open access dataset. In case you haven't received your lab report yet, or have not been tested, we might follow up with you over email.</p></div>
+			<hr>
+		<label for="date">
+			<h4><strong>When did you get tested for COVID-19? </strong></h4>	
+			<input type="date" name="date" id="date" required="">
+		</label>
+		<br>
+		<br>
+		<label for="myfile">
+			<h4><strong>(Optional) Please upload an image or pdf of the lab report for your COVID-19 test. You can take a screenshot or photo of your report.</strong></h4>
+			<input type="file" id="myfile" name="myfile">
+		</label>
+		<br>
+		<br>
+		<label for="covid3">
+			<h4><strong>What type of test did you take? </strong></h4>
+			<input type="radio" name="covid3" value="Blood test" id="covid3">
+			Blood test
+			<br>
+			<input type="radio" name="covid3" value="Swab test" id="covid3">
+			Swab test
+			<br>
+			<input type="radio" name="covid3" value="Other" id="covid3">
+			Other
+			<br>
+		</label>
+		<br>
+		<label for="text">
+			<h4><strong>If you are not submitting a lab report, please tell us the name of the hospital or facility / laboratory where you were tested for COVID-19</strong></h4>
+			<input type="textarea" name="text" id="text" style="width: 100%" >
+		</label>
+		<hr>
+		<h2>Recordings: Speech sample and cough sounds</h2>
+		<div><p style="color:red;">While recording, please make sure that you are away from other people, and that you are in a quiet place. You may wear a cloth or N95 mask while recording if you prefer.</p></div>
+		<hr>
+		<div>
+			<p><strong>NOTE:</strong> If asked, please allow permission to use your microphone. If your browser does not support audio recordings, please try using a different browser, or try using a laptop instead of a mobile phone. 
+
+			<p>Press 'Record' to start recording, press 'Stop' to stop, and 'Play' to review your recording. Please review your recording to make sure it was recorded correctly. You can re-record it as many times as you like.</p>
+
+			<p><strong>Speech sample:</strong> We need to collect a sample of your natural voice before we record your cough sounds. If you want to record the cough sound samples with a mask, please keep the mask on for this recording as well.</p>
+			</p>
+		</div>
+		<!-- <h1>Simple Recorder.js demo</h1>
+    <p><small>Made by the <a href="https://addpipe.com" target="_blank">Pipe Video Recording Platform</a></small></p>
+    <p>This demo uses <a href="https://github.com/mattdiamond/Recorderjs" target="_blank">Recorder.js</a> to record wav/PCM audio directly in the browser. Matt Diamond‘s <a target="_blank" href="https://github.com/mattdiamond/Recorderjs">Recorder.js</a> is a popular JavaScript library for recording audio in the browser as uncompressed pcm audio in .wav containers. Before it, the only way to record audio was to use Flash.</p>
+    <p>Check out the <a href="https://github.com/addpipe/simple-recorderjs-demo" target="_blank">code on GitHub</a> and <a href="https://addpipe.com/blog/using-recorder-js-to-capture-wav-audio-in-your-html5-web-site/" target="_blank">our blog post on using Recorder.js to capture WAV audio</a>.</p>
+    <div id="controls">
+  	 <button id="recordButton">Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Format: start recording to see sample rate</div>
+  	<p><strong>Recordings:</strong></p>
+  	<ol id="recordingsList"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  	<script src="test_form.js"></script> --> 
+  	<label for="covid4">
+  		<h4><strong>Did you wear a mask to record the cough sounds and speech sample? What kind?</strong></h4>
+  		<input type="radio" name="covid4" value="I did not wear a mask" id="covid4">
+		I did not wear a mask
+		<br>
+		<input type="radio" name="covid4" value="I wore a cloth mask/surgical mask" id="covid4">
+		I wore a cloth mask/surgical mask
+		<br>
+		<input type="radio" name="covid4" value="I wore an N95 mask" id="covid4">
+		I wore an N95 mask
+		<br>
+		<input type="radio" name="covid4" value="I wore a different type of mask or mouth covering" id="covid4">
+		I wore a different type of mask or mouth covering
+		<br>
+  	</label>
+  	<hr>
+  	<label for="mail">
+  		<h4><strong>
+Your email address (If you have filled this form before, please use the same email as the last time) </strong></h4>
+<input type="email" name="mail" id="mail" style="width: 100%;" placeholder="example@example.com" required="">
+  	</label>
+  	<label for="comments">
+  		<h4><strong>If you have any feedback about the survey or the study, or if you thought that some of the questions you had to answer were not clear, please leave us a message.</strong></h4>
+  		<textarea name="comments" id="comments" style="width: 100%; height: 100px;" id="comments"></textarea>
+  	</label>
+  	<button type="submit" class="btn btn-success bt-lg" style="margin: auto 50%;">Submit!</button>
+
+  </form>
+</div>
+</body>
+
+</html>
