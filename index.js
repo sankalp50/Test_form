@@ -1,7 +1,9 @@
 const express		=require("express"),
       app			=express(),
       bodyParser	=require("body-parser"),
-      mongoose		=require("mongoose");
+	  mongoose		=require("mongoose"),
+	  multer        =require("multer"),
+	  path          =require("path");
 
 
 mongoose.connect('mongodb://localhost:27017/form', {useNewUrlParser: true ,useUnifiedTopology: true});
@@ -9,14 +11,30 @@ mongoose.connect('mongodb://localhost:27017/form', {useNewUrlParser: true ,useUn
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+// app.use('/static', express.static(__dirname + '/public'));
+
+var Storage = multer.diskStorage({
+	destination:"uploads/",
+	filename:(req,file,cb)=>{
+		cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname))
+	}
+});
+
+const upload = multer({
+	storage:Storage
+}).single('file');
 
 //SCHEMA SETUP
 let dataSchema = new mongoose.Schema(
 {
 	covid: String,
+	country: String,
+	age: String,
+	sex: String,
 	covid1: Object,
 	covid2: String,
 	date: String,
+	myFile: String,
 	covid3: String,
 	text: String,
 	covid4: String,
@@ -31,13 +49,17 @@ app.get("/",function(req,res)
 	res.render("form");
 });
 
-app.post("/form",function(req,res)
+app.post("/form",upload,function(req,res)
 		{
 	const newData={
-    covid: req.body.covid,
+	covid: req.body.covid,
+	country: req.body.country,
+	age: req.body.age,
+	sex: req.body.sex,
 	covid1: req.body.covid1,
 	covid2: req.body.covid2,
 	date: req.body.date,
+	myFile: req.file.filename,
 	covid3: req.body.covid3,
 	text: req.body.text,
 	covid4: req.body.covid4,

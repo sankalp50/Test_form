@@ -4,185 +4,487 @@
 	<meta charset="UTF-8">
 	<title>Form</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<!-- <link rel="stylesheet" type="text/css" href="test_form.css"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	
 </head>
 <body style="margin: 40px;">
-	<div class="icon" style="text-align: center; padding-bottom: 20px; padding-top: 20px;">
-		<img src="icon.png">
-		<h1>Swasthya</h1>
+	<div class="icon" style="text-align: center; padding-bottom: 20px;">
+		<img src="http://142.93.212.249/wp-content/uploads/2020/05/ap.png">
 	</div>
-	<div class="container" style="width: 50%;">
-		<form action="/form" method="POST">
-		<label for="covid">
-			<h4><strong>Which of the following best describes you?</strong></h4>
-			<input type="radio" name="covid" value="I have tested positive for COVID-19" id="covid">
-			I have tested positive for COVID-19
-			<br>
-			<input type="radio" name="covid" value="I have tested negative for COVID-19" id="covid">
-			I have tested negative for COVID-19
-			<br>
-			<input type="radio" name="covid" value="I have taken a test for COVID-19 but have not received my lab report yet" id="covid">
-			I have taken a test for COVID-19 but have not received my lab report yet
-			<br>
-			<input type="radio" name="covid" value="I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional" id="covid">
-			I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional
-			<br>
-			<input type="radio" name="covid" value="I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms" id="covid">
-			I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms
-			<br>
-			<input type="radio" name="covid" value="I am a returning participant. I submitted my test results last time OR I have no test results to submit" id="covid">
-			I am a returning participant. I submitted my test results last time OR I have no test results to submit
-			<br>
-			<input type="radio" name="covid" value="I am a returning participant. I am here to submit my test results" id="covid">
-			I am a returning participant. I am here to submit my test results
-			<br>
-		</label>
-		<hr>
-		<h2>Demographic and health details</h2>
-		<hr>
-		<label for="covid1">
-			<h4><strong>Which of these symptoms are you currently experiencing? (Select all that apply)</strong></h4>
-			<input type="checkbox" name="covid1" value="No symptoms" id="covid1">
-			No symptoms
-			<br>
-			<input type="checkbox" name="covid1" value="Fever" id="covid1">
-			Fever
-			<br>
-			<input type="checkbox" name="covid1" value="Cough" id="covid1">
-			Cough
-			<br>
-			<input type="checkbox" name="covid1" value="Sore throat" id="covid1">
-			Sore throat
-			<br>
-			<input type="checkbox" name="covid1" value="Runny nose" id="covid1">
-			Runny nose
-			<br>
-			<input type="checkbox" name="covid1" value="Shortness of breath" id="covid1">
-			Shortness of breath
-			<br>
-			<input type="checkbox" name="covid1" value="Fatigue" id="covid1">
-			Fatigue
-			<br>
-			<input type="checkbox" name="covid1" value="Body aches" id="covid1">
-			Body aches
-			<br>
-			<input type="checkbox" name="covid1" value="Diarrhoea" id="covid1">
-			Diarrhoea
-			<br>
-			<input type="checkbox" name="covid1" value="Loss of smell or taste" id="covid1">
-			Loss of smell or taste
-			<br>
-		</label>
-		<label for="covid2">
-			<h4><strong>If you reported having a cough, when did the cough start? </strong></h4>
-			<input type="radio" name="covid2" value="I do not have a cough" id="covid2">
-			I do not have a cough
-			<br>
-			<input type="radio" name="covid2" value="Less than three days ago" id="covid2">
-			Less than three days ago
-			<br>
-			<input type="radio" name="covid2" value="A week ago" id="covid2">
-			A week ago
-			<br>
-			<input type="radio" name="covid2" value="More than a week ago" id="covid2">
-			More than a week ago
-			<br>
-			<input type="radio" name="covid2" value="I have a chronic cough" id="covid2">
-			I have a chronic cough
-			<br>
-			<hr>
-		</label>
-			<h2>COVID-19 test details</h2>
-			<br>
-			<div><p style="color:red;">Your test results will help us validate the recordings we collect. You can submit a redacted version of your lab report (with private information blacked out or hidden). Note that your test results will not be shared or made part of the open access dataset. In case you haven't received your lab report yet, or have not been tested, we might follow up with you over email.</p></div>
-			<hr>
-		<label for="date">
-			<h4><strong>When did you get tested for COVID-19? </strong></h4>	
-			<input type="date" name="date" id="date" required="">
-		</label>
-		<br>
-		<br>
-		<label for="myfile">
-			<h4><strong>(Optional) Please upload an image or pdf of the lab report for your COVID-19 test. You can take a screenshot or photo of your report.</strong></h4>
-			<input type="file" id="myfile" name="myfile">
-		</label>
-		<br>
-		<br>
-		<label for="covid3">
-			<h4><strong>What type of test did you take? </strong></h4>
-			<input type="radio" name="covid3" value="Blood test" id="covid3">
-			Blood test
-			<br>
-			<input type="radio" name="covid3" value="Swab test" id="covid3">
-			Swab test
-			<br>
-			<input type="radio" name="covid3" value="Other" id="covid3">
-			Other
-			<br>
-		</label>
-		<br>
-		<label for="text">
-			<h4><strong>If you are not submitting a lab report, please tell us the name of the hospital or facility / laboratory where you were tested for COVID-19</strong></h4>
-			<input type="textarea" name="text" id="text" style="width: 100%" >
-		</label>
-		<hr>
-		<h2>Recordings: Speech sample and cough sounds</h2>
-		<div><p style="color:red;">While recording, please make sure that you are away from other people, and that you are in a quiet place. You may wear a cloth or N95 mask while recording if you prefer.</p></div>
-		<hr>
-		<div>
-			<p><strong>NOTE:</strong> If asked, please allow permission to use your microphone. If your browser does not support audio recordings, please try using a different browser, or try using a laptop instead of a mobile phone. 
-
-			<p>Press 'Record' to start recording, press 'Stop' to stop, and 'Play' to review your recording. Please review your recording to make sure it was recorded correctly. You can re-record it as many times as you like.</p>
-
-			<p><strong>Speech sample:</strong> We need to collect a sample of your natural voice before we record your cough sounds. If you want to record the cough sound samples with a mask, please keep the mask on for this recording as well.</p>
-			</p>
+	<div class="container" >
+		<div class="row">
+			<form action="/form" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="covid">
+						<h4><strong>Which of the following best describes you?</strong></h4>
+						<input type="radio" name="covid" value="I have tested positive for COVID-19" id="covid">
+						I have tested positive for COVID-19
+						<br>
+						<input type="radio" name="covid" value="I have tested negative for COVID-19" id="covid">
+						I have tested negative for COVID-19
+						<br>
+						<input type="radio" name="covid" value="I have taken a test for COVID-19 but have not received my lab report yet" id="covid">
+						I have taken a test for COVID-19 but have not received my lab report yet
+						<br>
+						<input type="radio" name="covid" value="I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional" id="covid">
+						I have not been tested for COVID-19 but have been put under home quarantine based on COVID-like symptoms by a medical professional
+						<br>
+						<input type="radio" name="covid" value="I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms" id="covid">
+						I have not been tested for COVID-19. I have no symptoms OR I haven’t consulted a medical professional for recent symptoms
+						<br>
+						<input type="radio" name="covid" value="I am a returning participant. I submitted my test results last time OR I have no test results to submit" id="covid">
+						I am a returning participant. I submitted my test results last time OR I have no test results to submit
+						<br>
+						<input type="radio" name="covid" value="I am a returning participant. I am here to submit my test results" id="covid">
+						I am a returning participant. I am here to submit my test results
+						<br>
+					</label>
+				</div>
+					<hr>
+					<h2>Demographic and health details</h2>
+					<hr> 
+					<div class="form-group">
+						<label for="country">
+							<h4><strong>Which country are you filling this for from?</strong></h4>
+							<select id="country" name="country">
+								<option value="Afganistan">Afghanistan</option>
+								<option value="Albania">Albania</option>
+								<option value="Algeria">Algeria</option>
+								<option value="American Samoa">American Samoa</option>
+								<option value="Andorra">Andorra</option>
+								<option value="Angola">Angola</option>
+								<option value="Anguilla">Anguilla</option>
+								<option value="Antigua & Barbuda">Antigua & Barbuda</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Armenia">Armenia</option>
+								<option value="Aruba">Aruba</option>
+								<option value="Australia">Australia</option>
+								<option value="Austria">Austria</option>
+								<option value="Azerbaijan">Azerbaijan</option>
+								<option value="Bahamas">Bahamas</option>
+								<option value="Bahrain">Bahrain</option>
+								<option value="Bangladesh">Bangladesh</option>
+								<option value="Barbados">Barbados</option>
+								<option value="Belarus">Belarus</option>
+								<option value="Belgium">Belgium</option>
+								<option value="Belize">Belize</option>
+								<option value="Benin">Benin</option>
+								<option value="Bermuda">Bermuda</option>
+								<option value="Bhutan">Bhutan</option>
+								<option value="Bolivia">Bolivia</option>
+								<option value="Bonaire">Bonaire</option>
+								<option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+								<option value="Botswana">Botswana</option>
+								<option value="Brazil">Brazil</option>
+								<option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+								<option value="Brunei">Brunei</option>
+								<option value="Bulgaria">Bulgaria</option>
+								<option value="Burkina Faso">Burkina Faso</option>
+								<option value="Burundi">Burundi</option>
+								<option value="Cambodia">Cambodia</option>
+								<option value="Cameroon">Cameroon</option>
+								<option value="Canada">Canada</option>
+								<option value="Canary Islands">Canary Islands</option>
+								<option value="Cape Verde">Cape Verde</option>
+								<option value="Cayman Islands">Cayman Islands</option>
+								<option value="Central African Republic">Central African Republic</option>
+								<option value="Chad">Chad</option>
+								<option value="Channel Islands">Channel Islands</option>
+								<option value="Chile">Chile</option>
+								<option value="China">China</option>
+								<option value="Christmas Island">Christmas Island</option>
+								<option value="Cocos Island">Cocos Island</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Comoros">Comoros</option>
+								<option value="Congo">Congo</option>
+								<option value="Cook Islands">Cook Islands</option>
+								<option value="Costa Rica">Costa Rica</option>
+								<option value="Cote DIvoire">Cote DIvoire</option>
+								<option value="Croatia">Croatia</option>
+								<option value="Cuba">Cuba</option>
+								<option value="Curaco">Curacao</option>
+								<option value="Cyprus">Cyprus</option>
+								<option value="Czech Republic">Czech Republic</option>
+								<option value="Denmark">Denmark</option>
+								<option value="Djibouti">Djibouti</option>
+								<option value="Dominica">Dominica</option>
+								<option value="Dominican Republic">Dominican Republic</option>
+								<option value="East Timor">East Timor</option>
+								<option value="Ecuador">Ecuador</option>
+								<option value="Egypt">Egypt</option>
+								<option value="El Salvador">El Salvador</option>
+								<option value="Equatorial Guinea">Equatorial Guinea</option>
+								<option value="Eritrea">Eritrea</option>
+								<option value="Estonia">Estonia</option>
+								<option value="Ethiopia">Ethiopia</option>
+								<option value="Falkland Islands">Falkland Islands</option>
+								<option value="Faroe Islands">Faroe Islands</option>
+								<option value="Fiji">Fiji</option>
+								<option value="Finland">Finland</option>
+								<option value="France">France</option>
+								<option value="French Guiana">French Guiana</option>
+								<option value="French Polynesia">French Polynesia</option>
+								<option value="French Southern Ter">French Southern Ter</option>
+								<option value="Gabon">Gabon</option>
+								<option value="Gambia">Gambia</option>
+								<option value="Georgia">Georgia</option>
+								<option value="Germany">Germany</option>
+								<option value="Ghana">Ghana</option>
+								<option value="Gibraltar">Gibraltar</option>
+								<option value="Great Britain">Great Britain</option>
+								<option value="Greece">Greece</option>
+								<option value="Greenland">Greenland</option>
+								<option value="Grenada">Grenada</option>
+								<option value="Guadeloupe">Guadeloupe</option>
+								<option value="Guam">Guam</option>
+								<option value="Guatemala">Guatemala</option>
+								<option value="Guinea">Guinea</option>
+								<option value="Guyana">Guyana</option>
+								<option value="Haiti">Haiti</option>
+								<option value="Hawaii">Hawaii</option>
+								<option value="Honduras">Honduras</option>
+								<option value="Hong Kong">Hong Kong</option>
+								<option value="Hungary">Hungary</option>
+								<option value="Iceland">Iceland</option>
+								<option value="Indonesia">Indonesia</option>
+								<option value="India">India</option>
+								<option value="Iran">Iran</option>
+								<option value="Iraq">Iraq</option>
+								<option value="Ireland">Ireland</option>
+								<option value="Isle of Man">Isle of Man</option>
+								<option value="Israel">Israel</option>
+								<option value="Italy">Italy</option>
+								<option value="Jamaica">Jamaica</option>
+								<option value="Japan">Japan</option>
+								<option value="Jordan">Jordan</option>
+								<option value="Kazakhstan">Kazakhstan</option>
+								<option value="Kenya">Kenya</option>
+								<option value="Kiribati">Kiribati</option>
+								<option value="Korea North">Korea North</option>
+								<option value="Korea Sout">Korea South</option>
+								<option value="Kuwait">Kuwait</option>
+								<option value="Kyrgyzstan">Kyrgyzstan</option>
+								<option value="Laos">Laos</option>
+								<option value="Latvia">Latvia</option>
+								<option value="Lebanon">Lebanon</option>
+								<option value="Lesotho">Lesotho</option>
+								<option value="Liberia">Liberia</option>
+								<option value="Libya">Libya</option>
+								<option value="Liechtenstein">Liechtenstein</option>
+								<option value="Lithuania">Lithuania</option>
+								<option value="Luxembourg">Luxembourg</option>
+								<option value="Macau">Macau</option>
+								<option value="Macedonia">Macedonia</option>
+								<option value="Madagascar">Madagascar</option>
+								<option value="Malaysia">Malaysia</option>
+								<option value="Malawi">Malawi</option>
+								<option value="Maldives">Maldives</option>
+								<option value="Mali">Mali</option>
+								<option value="Malta">Malta</option>
+								<option value="Marshall Islands">Marshall Islands</option>
+								<option value="Martinique">Martinique</option>
+								<option value="Mauritania">Mauritania</option>
+								<option value="Mauritius">Mauritius</option>
+								<option value="Mayotte">Mayotte</option>
+								<option value="Mexico">Mexico</option>
+								<option value="Midway Islands">Midway Islands</option>
+								<option value="Moldova">Moldova</option>
+								<option value="Monaco">Monaco</option>
+								<option value="Mongolia">Mongolia</option>
+								<option value="Montserrat">Montserrat</option>
+								<option value="Morocco">Morocco</option>
+								<option value="Mozambique">Mozambique</option>
+								<option value="Myanmar">Myanmar</option>
+								<option value="Nambia">Nambia</option>
+								<option value="Nauru">Nauru</option>
+								<option value="Nepal">Nepal</option>
+								<option value="Netherland Antilles">Netherland Antilles</option>
+								<option value="Netherlands">Netherlands (Holland, Europe)</option>
+								<option value="Nevis">Nevis</option>
+								<option value="New Caledonia">New Caledonia</option>
+								<option value="New Zealand">New Zealand</option>
+								<option value="Nicaragua">Nicaragua</option>
+								<option value="Niger">Niger</option>
+								<option value="Nigeria">Nigeria</option>
+								<option value="Niue">Niue</option>
+								<option value="Norfolk Island">Norfolk Island</option>
+								<option value="Norway">Norway</option>
+								<option value="Oman">Oman</option>
+								<option value="Pakistan">Pakistan</option>
+								<option value="Palau Island">Palau Island</option>
+								<option value="Palestine">Palestine</option>
+								<option value="Panama">Panama</option>
+								<option value="Papua New Guinea">Papua New Guinea</option>
+								<option value="Paraguay">Paraguay</option>
+								<option value="Peru">Peru</option>
+								<option value="Phillipines">Philippines</option>
+								<option value="Pitcairn Island">Pitcairn Island</option>
+								<option value="Poland">Poland</option>
+								<option value="Portugal">Portugal</option>
+								<option value="Puerto Rico">Puerto Rico</option>
+								<option value="Qatar">Qatar</option>
+								<option value="Republic of Montenegro">Republic of Montenegro</option>
+								<option value="Republic of Serbia">Republic of Serbia</option>
+								<option value="Reunion">Reunion</option>
+								<option value="Romania">Romania</option>
+								<option value="Russia">Russia</option>
+								<option value="Rwanda">Rwanda</option>
+								<option value="St Barthelemy">St Barthelemy</option>
+								<option value="St Eustatius">St Eustatius</option>
+								<option value="St Helena">St Helena</option>
+								<option value="St Kitts-Nevis">St Kitts-Nevis</option>
+								<option value="St Lucia">St Lucia</option>
+								<option value="St Maarten">St Maarten</option>
+								<option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+								<option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+								<option value="Saipan">Saipan</option>
+								<option value="Samoa">Samoa</option>
+								<option value="Samoa American">Samoa American</option>
+								<option value="San Marino">San Marino</option>
+								<option value="Sao Tome & Principe">Sao Tome & Principe</option>
+								<option value="Saudi Arabia">Saudi Arabia</option>
+								<option value="Senegal">Senegal</option>
+								<option value="Seychelles">Seychelles</option>
+								<option value="Sierra Leone">Sierra Leone</option>
+								<option value="Singapore">Singapore</option>
+								<option value="Slovakia">Slovakia</option>
+								<option value="Slovenia">Slovenia</option>
+								<option value="Solomon Islands">Solomon Islands</option>
+								<option value="Somalia">Somalia</option>
+								<option value="South Africa">South Africa</option>
+								<option value="Spain">Spain</option>
+								<option value="Sri Lanka">Sri Lanka</option>
+								<option value="Sudan">Sudan</option>
+								<option value="Suriname">Suriname</option>
+								<option value="Swaziland">Swaziland</option>
+								<option value="Sweden">Sweden</option>
+								<option value="Switzerland">Switzerland</option>
+								<option value="Syria">Syria</option>
+								<option value="Tahiti">Tahiti</option>
+								<option value="Taiwan">Taiwan</option>
+								<option value="Tajikistan">Tajikistan</option>
+								<option value="Tanzania">Tanzania</option>
+								<option value="Thailand">Thailand</option>
+								<option value="Togo">Togo</option>
+								<option value="Tokelau">Tokelau</option>
+								<option value="Tonga">Tonga</option>
+								<option value="Trinidad & Tobago">Trinidad & Tobago</option>
+								<option value="Tunisia">Tunisia</option>
+								<option value="Turkey">Turkey</option>
+								<option value="Turkmenistan">Turkmenistan</option>
+								<option value="Turks & Caicos Is">Turks & Caicos Is</option>
+								<option value="Tuvalu">Tuvalu</option>
+								<option value="Uganda">Uganda</option>
+								<option value="United Kingdom">United Kingdom</option>
+								<option value="Ukraine">Ukraine</option>
+								<option value="United Arab Erimates">United Arab Emirates</option>
+								<option value="United States of America">United States of America</option>
+								<option value="Uraguay">Uruguay</option>
+								<option value="Uzbekistan">Uzbekistan</option>
+								<option value="Vanuatu">Vanuatu</option>
+								<option value="Vatican City State">Vatican City State</option>
+								<option value="Venezuela">Venezuela</option>
+								<option value="Vietnam">Vietnam</option>
+								<option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+								<option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+								<option value="Wake Island">Wake Island</option>
+								<option value="Wallis & Futana Is">Wallis & Futana Is</option>
+								<option value="Yemen">Yemen</option>
+								<option value="Zaire">Zaire</option>
+								<option value="Zambia">Zambia</option>
+								<option value="Zimbabwe">Zimbabwe</option>
+							 </select>
+							 
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="age">
+							<h4><strong>What is your age? </strong></h4>
+							<input type="text" name="age" id="age" style="width: 100%;">
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="sex">
+							<h4><strong>Prefer not to answer</strong></h4>
+							<input type="radio" name="sex" value="male" id="sex">
+							Male
+							<br>
+							<input type="radio" name="sex" value="female" id="sex">
+							Female
+							<br>
+							<input type="radio" name="sex" value="other" id="sex">
+							Other
+							<br>
+							<input type="radio" name="sex" value="Prefer not to answer" id="sex">
+							Prefer not to answer
+							<br>
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="covid1">
+							<h4><strong>Which of these symptoms are you currently experiencing? (Select all that apply)</strong></h4>
+							<input type="checkbox" name="covid1" value="No symptoms" id="covid1">
+							No symptoms
+							<br>
+							<input type="checkbox" name="covid1" value="Fever" id="covid1">
+							Fever
+							<br>
+							<input type="checkbox" name="covid1" value="Cough" id="covid1">
+							Cough
+							<br>
+							<input type="checkbox" name="covid1" value="Sore throat" id="covid1">
+							Sore throat
+							<br>
+							<input type="checkbox" name="covid1" value="Runny nose" id="covid1">
+							Runny nose
+							<br>
+							<input type="checkbox" name="covid1" value="Shortness of breath" id="covid1">
+							Shortness of breath
+							<br>
+							<input type="checkbox" name="covid1" value="Fatigue" id="covid1">
+							Fatigue
+							<br>
+							<input type="checkbox" name="covid1" value="Body aches" id="covid1">
+							Body aches
+							<br>
+							<input type="checkbox" name="covid1" value="Diarrhoea" id="covid1">
+							Diarrhoea
+							<br>
+							<input type="checkbox" name="covid1" value="Loss of smell or taste" id="covid1">
+							Loss of smell or taste
+							<br>
+						</label>
+					</div>
+					
+					<div class="form-group">
+						<label for="covid2">
+							<h4><strong>If you reported having a cough, when did the cough start? </strong></h4>
+							<input type="radio" name="covid2" value="I do not have a cough" id="covid2">
+							I do not have a cough
+							<br>
+							<input type="radio" name="covid2" value="Less than three days ago" id="covid2">
+							Less than three days ago
+							<br>
+							<input type="radio" name="covid2" value="A week ago" id="covid2">
+							A week ago
+							<br>
+							<input type="radio" name="covid2" value="More than a week ago" id="covid2">
+							More than a week ago
+							<br>
+							<input type="radio" name="covid2" value="I have a chronic cough" id="covid2">
+							I have a chronic cough
+							<br>
+						</label>
+					</div>
+					
+					<hr>
+					<h2>COVID-19 test details</h2>
+					<div><p style="color:red;">Your test results will help us validate the recordings we collect. You can submit a redacted version of your lab report (with private information blacked out or hidden). Note that your test results will not be shared or made part of the open access dataset. In case you haven't received your lab report yet, or have not been tested, we might follow up with you over email.</p></div>
+					<hr>
+					<div class="form-group">
+						<label for="date">
+							<h4><strong>When did you get tested for COVID-19? </strong></h4>	
+							<input type="date" name="date" id="date" required="">
+						</label>
+					</div>
+				
+					<div class="form-group">
+						<label for="file">
+							<h4><strong>(Optional) Please upload an image or pdf of the lab report for your COVID-19 test. You can take a screenshot or photo of your report.</strong></h4>
+							<br>
+							<input type="file" id="file" name="file">
+						</label>
+					</div>
+	
+					<div class="form-group">
+						<label for="covid3">
+							<h4><strong>What type of test did you take? </strong></h4>
+							<input type="radio" name="covid3" value="Blood test" id="covid3">
+							Blood test
+							<br>
+							<input type="radio" name="covid3" value="Swab test" id="covid3">
+							Swab test
+							<br>
+							<input type="radio" name="covid3" value="Other" id="covid3">
+							Other
+							<br>
+						</label>
+					</div>
+		
+					<div class="form-group">
+						<label for="text">
+							<h4><strong>If you are not submitting a lab report, please tell us the name of the hospital or facility / laboratory where you were tested for COVID-19</strong></h4>
+							<input type="text" name="text" id="text"  >
+						</label>
+					</div>
+					<hr>
+					<div class="form-group">
+						<h2>Recordings: Speech sample and cough sounds</h2>
+						<p style="color:red;">While recording, please make sure that you are away from other people, and that you are in a quiet place. You may wear a cloth or N95 mask while recording if you prefer.</p>
+					<hr>
+						<p><strong>NOTE:</strong> If asked, please allow permission to use your microphone. If your browser does not support audio recordings, please try using a different browser, or try using a laptop instead of a mobile phone. 
+	
+						<p>Press 'Record' to start recording, press 'Stop' to stop, and 'Play' to review your recording. Please review your recording to make sure it was recorded correctly. You can re-record it as many times as you like.</p>
+	
+						<p><strong>Speech sample:</strong> We need to collect a sample of your natural voice before we record your cough sounds. If you want to record the cough sound samples with a mask, please keep the mask on for this recording as well.</p>
+						</p>
+					</div>
+					<br>
+					<div class="form-group">
+						<h4><strong>Cough Sound:</strong>We need three recordings of you coughing. Note that this could be a voluntary cough, not necessarily a natural cough. Each recording should be a few seconds long (around 2-3 seconds).</h4>
+						<div id="controls">
+						<button id="recordButton">Record</button>
+						<button id="pauseButton" disabled>Pause</button>
+						<button id="stopButton" disabled>Stop</button>
+						</div>
+						<div id="formats">Format: start recording to see sample rate</div>
+						<p><strong>Recordings:</strong></p>
+						<ol id="recordingsList"></ol>
+					</div>
+						
+					<div class="form-group">
+						<label for="covid4">
+							<h4><strong>Did you wear a mask to record the cough sounds and speech sample? What kind?</strong></h4>
+							<input type="radio" name="covid4" value="I did not wear a mask" id="covid4">
+						I did not wear a mask
+						<br>
+						<input type="radio" name="covid4" value="I wore a cloth mask/surgical mask" id="covid4">
+						I wore a cloth mask/surgical mask
+						<br>
+						<input type="radio" name="covid4" value="I wore an N95 mask" id="covid4">
+						I wore an N95 mask
+						<br>
+						<input type="radio" name="covid4" value="I wore a different type of mask or mouth covering" id="covid4">
+						I wore a different type of mask or mouth covering
+						<br>
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="mail">
+							<h4><strong>
+							Your email address (If you have filled this form before, please use the same email as the last time) </strong></h4>
+							<input type="email" name="mail" id="mail"  placeholder="example@example.com" required="">
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="comments">
+							<h4><strong>If you have any feedback about the survey or the study, or if you thought that some of the questions you had to answer were not clear, please leave us a message.</strong></h4>
+							<textarea name="comments" id="comments" style="width: 100%; height: 100px;" id="comments"></textarea>
+						</label>
+					</div>
+					<div class="form-group" style="text-align: center;">
+						<button type="submit" class="btn btn-success bt-lg">Submit!</button>
+					</div>
+					  
+	
+			  </form>
 		</div>
-		<!-- <h1>Simple Recorder.js demo</h1>
-    <p><small>Made by the <a href="https://addpipe.com" target="_blank">Pipe Video Recording Platform</a></small></p>
-    <p>This demo uses <a href="https://github.com/mattdiamond/Recorderjs" target="_blank">Recorder.js</a> to record wav/PCM audio directly in the browser. Matt Diamond‘s <a target="_blank" href="https://github.com/mattdiamond/Recorderjs">Recorder.js</a> is a popular JavaScript library for recording audio in the browser as uncompressed pcm audio in .wav containers. Before it, the only way to record audio was to use Flash.</p>
-    <p>Check out the <a href="https://github.com/addpipe/simple-recorderjs-demo" target="_blank">code on GitHub</a> and <a href="https://addpipe.com/blog/using-recorder-js-to-capture-wav-audio-in-your-html5-web-site/" target="_blank">our blog post on using Recorder.js to capture WAV audio</a>.</p>
-    <div id="controls">
-  	 <button id="recordButton">Record</button>
-  	 <button id="pauseButton" disabled>Pause</button>
-  	 <button id="stopButton" disabled>Stop</button>
-    </div>
-    <div id="formats">Format: start recording to see sample rate</div>
-  	<p><strong>Recordings:</strong></p>
-  	<ol id="recordingsList"></ol>
-    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-  	<!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-  	<script src="test_form.js"></script> --> 
-  	<label for="covid4">
-  		<h4><strong>Did you wear a mask to record the cough sounds and speech sample? What kind?</strong></h4>
-  		<input type="radio" name="covid4" value="I did not wear a mask" id="covid4">
-		I did not wear a mask
-		<br>
-		<input type="radio" name="covid4" value="I wore a cloth mask/surgical mask" id="covid4">
-		I wore a cloth mask/surgical mask
-		<br>
-		<input type="radio" name="covid4" value="I wore an N95 mask" id="covid4">
-		I wore an N95 mask
-		<br>
-		<input type="radio" name="covid4" value="I wore a different type of mask or mouth covering" id="covid4">
-		I wore a different type of mask or mouth covering
-		<br>
-  	</label>
-  	<hr>
-  	<label for="mail">
-  		<h4><strong>
-Your email address (If you have filled this form before, please use the same email as the last time) </strong></h4>
-<input type="email" name="mail" id="mail" style="width: 100%;" placeholder="example@example.com" required="">
-  	</label>
-  	<label for="comments">
-  		<h4><strong>If you have any feedback about the survey or the study, or if you thought that some of the questions you had to answer were not clear, please leave us a message.</strong></h4>
-  		<textarea name="comments" id="comments" style="width: 100%; height: 100px;" id="comments"></textarea>
-  	</label>
-  	<button type="submit" class="btn btn-success bt-lg" style="margin: auto 50%;">Submit!</button>
 
-  </form>
-</div>
+	</div>
+		<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+		<script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
