@@ -1,12 +1,14 @@
 
-.wrapper {
+/* .wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
+  } */
   body{
     font-family: 'Roboto', sans-serif;
     font-size: medium;
+    margin: 25px;
+    min-width: 480px;
   }
   hr {
     background-color: gray;
@@ -14,13 +16,13 @@
     
  }
  
- h1 {
+ /* h1 {
     text-decoration: underline red;
     text-decoration-thickness: 3px;
     text-underline-offset: 6px;
     font-size: 220%;
     font-weight: bold;
-}
+} */
 
 h2 {
     font-weight: bold;
@@ -38,13 +40,13 @@ h2 {
     margin-bottom: 0.5rem;
   } */
   
-  #buttons {
+  .buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   
-  #buttons button {
+  .buttons button {
     font-size: 1rem;
     padding: 1rem;
     width: calc(50% - 0.25rem);
@@ -159,13 +161,13 @@ h2 {
     cursor: pointer;
   }
   
-  /* Adjustments for wider screens */
-  @media all and (min-width: 800px) {
+  /* Adjustments for wider screens
+  @media all and (min-width: 800px) { */
     /* Don't take all the space as readability is lost when line length
        goes past a certain size */
-    .wrapper {
+    /* .wrapper {
       width: 90%;
       max-width: 1000px;
       margin: 0 auto;
     }
-  }
+  } */

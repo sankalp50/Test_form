@@ -22,7 +22,7 @@ var Storage = multer.diskStorage({
 
 const upload = multer({
 	storage:Storage
-}).single('file');
+}).any('file');
 
 //SCHEMA SETUP
 let dataSchema = new mongoose.Schema(
@@ -59,7 +59,7 @@ app.post("/form",upload,function(req,res)
 	covid1: req.body.covid1,
 	covid2: req.body.covid2,
 	date: req.body.date,
-	myFile: req.file.filename,
+	// myFile: req.file.filename,
 	covid3: req.body.covid3,
 	text: req.body.text,
 	covid4: req.body.covid4,

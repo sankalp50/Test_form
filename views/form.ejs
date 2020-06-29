@@ -9,12 +9,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	
 </head>
-<body style="margin: 40px;">
+<body>
 	<div class="icon" style="text-align: center; padding-bottom: 20px;">
 		<img src="http://142.93.212.249/wp-content/uploads/2020/05/ap.png">
 	</div>
-	<div class="container" style="width: 50%;">
+	<div class="container">
 		<div class="row">
+			<div class="col-lg-12">
 			<form id="myForm" name="myForm" onsubmit="sendData()" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="covid">
@@ -389,14 +390,14 @@
 							<input type="date" name="date" id="date" required="">
 						</label>
 					</div>
-				
+<!-- 				
 					<div class="form-group">
 						<label for="file">
 							<h4><strong>(Optional) Please upload an image or pdf of the lab report for your COVID-19 test. You can take a screenshot or photo of your report.</strong></h4>
 							<br>
 							<input type="file" id="file" name="file">
 						</label>
-					</div>
+					</div> -->
 	
 					<div class="form-group">
 						<label for="covid3">
@@ -413,12 +414,12 @@
 						</label>
 					</div>
 		
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="text">
 							<h4><strong>If you are not submitting a lab report, please tell us the name of the hospital or facility / laboratory where you were tested for COVID-19</strong></h4>
 							<input type="text" name="text" id="text"  >
 						</label>
-					</div>
+					</div> -->
 					<hr>
 					<div class="form-group">
 						<h2>Recordings: Speech sample and cough sounds</h2>
@@ -436,7 +437,7 @@
 						<h4><strong>Cough Sound:</strong>We need three recordings of you coughing. Note that this could be a voluntary cough, not necessarily a natural cough. Each recording should be a few seconds long (around 2-3 seconds).</h4>
 						<section class="main-controls">
 							<canvas class="visualizer" height="60px"></canvas>
-							<div id="buttons">
+							<div class="buttons">
 							  <button class="record">Record</button>
 							  <button class="stop">Stop</button>
 							</div>
@@ -446,6 +447,8 @@
 					
 					
 						  </section>
+					</div>
+					
 						
 					<div class="form-group">
 						<label for="covid4">
@@ -483,6 +486,7 @@
 					  
 	
 			  </form>
+			</div>
 		</div>
 
 	</div>

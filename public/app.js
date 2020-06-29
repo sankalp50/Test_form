@@ -5,10 +5,15 @@ const stop = document.querySelector('.stop');
 const soundClips = document.querySelector('.sound-clips');
 const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
+var file;
+var file2;
+var file3;
+let count=0;
 
 // disable stop button while not recording
 
 stop.disabled = true;
+
 
 // visualiser setup - create web audio api context and canvas
 
@@ -22,6 +27,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
   const constraints = { audio: true };
   let chunks = [];
+  let chunks2 = [];
+  let chunks3 = [];
 
   let onSuccess = function(stream) {
     const mediaRecorder = new MediaRecorder(stream);
@@ -77,14 +84,34 @@ if (navigator.mediaDevices.getUserMedia) {
       soundClips.appendChild(clipContainer);
 
       audio.controls = true;
+      if(count==1)
+      {
       const blob = new Blob(chunks, { 'type' : 'audio/wav; codecs=opus' });
-      var file = new File([blob], "audioFile");
+      file = new File([blob], "audioFile");
       chunks = [];
       const audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
+      }
+      if (count==2)
+      {
+      const blob2 = new Blob(chunks2, { 'type' : 'audio/wav; codecs=opus' });
+      file2 = new File([blob2], "audioFile");
+      chunks2 = [];
+      const audioURL = window.URL.createObjectURL(blob2);
+      audio.src = audioURL;
+      }
+      if(count==3)
+      {
+      const blob3 = new Blob(chunks3, { 'type' : 'audio/wav; codecs=opus' });
+      file3 = new File([blob3], "audioFile");
+      chunks3 = [];
+      const audioURL = window.URL.createObjectURL(blob3);
+      audio.src = audioURL;
+      }
       console.log("recorder stopped");
 
       deleteButton.onclick = function(e) {
+        count--;
         let evtTgt = e.target;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
@@ -101,24 +128,23 @@ if (navigator.mediaDevices.getUserMedia) {
     }
 
     mediaRecorder.ondataavailable = function(e) {
-      chunks.push(e.data);
+      count++;
+      if(count==1)
+      {
+        chunks.push(e.data);
+      }
+      if(count==2)
+      {
+        chunks2.push(e.data);
+      }
+      if(count==3)
+      {
+        chunks3.push(e.data);
+      }
     }
   }
 
-  function sendData() {
-    let myForm = document.getElementById('myForm');
-    let fd = new FormData(myForm);
-    var xhr=new XMLHttpRequest();
-    // xhr.onload=function(e) {
-    //     if(this.readyState === 4) {
-    //         console.log("Server returned: ",e.target.responseText);
-    //     }
-    // };
-    // var fd=new FormData(formData);
-    fd.append("audio_data",file, "audioFile");
-    xhr.open("POST","/form",true);
-    xhr.send(fd);
-  }
+ 
 
   let onError = function(err) {
     console.log('The following error occured: ' + err);
@@ -128,6 +154,22 @@ if (navigator.mediaDevices.getUserMedia) {
 
 } else {
    console.log('getUserMedia not supported on your browser!');
+}
+function sendData() {
+  let myForm = document.getElementById('myForm');
+  let fd = new FormData(myForm);
+  var xhr=new XMLHttpRequest();
+  xhr.onload=function(e) {
+      if(this.readyState === 4) {
+          console.log("Server returned: ",e.target.responseText);
+      }
+  };
+  // var fd=new FormData(formData);
+  fd.append("audio_data",file, "audioFile");
+  fd.append("audio_data",file2, "audioFile");
+  fd.append("audio_data",file3, "audioFile");
+  xhr.open("POST","/form",true);
+  xhr.send(fd);
 }
 
 function visualize(stream) {
